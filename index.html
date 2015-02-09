@@ -1,0 +1,152 @@
+<!Doctype html>
+<html lang="ko-KR">
+<head>
+    <meta charset="utf-8">
+    <meta name="Content-type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta name="X-UA-Compatible" content="IE=EDGE">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        var cost1, cost2;
+        var basic;
+        var result;
+        function exc() {
+            cost1 = document.getElementById("cost1").value;
+            basic = document.getElementsByClassName("basic").innerHTML;
+            result = cost1 * basic;
+            document.getElementById("cost2").value = result;
+        }
+    </script>
+    <title>환율정보</title>
+</head>
+<body>
+    <div id="section">
+        <h1>환율 정보</h1>
+        <div class="exchangerate">
+            <div class="exchangerate_select">
+                <div class="box">
+                    <div class="select">
+                        <img src="http://jinjulee.dothome.co.kr/images/nts/flag_krw.png" name=i0 class="flag_img"><form>
+                            <select name="nation1" onchange=chImg2(this.value) class="select_nation" >
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_krw.png">대한민국</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_usd.png">미국</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_jpy.png">일본</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_eur.png">유럽연합</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_cny.png">중국</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_aud.png">호주</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_cad.png">캐나다</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_nzd.png">뉴질랜드</option>
+                            </select>
+
+                            <span class="nt_eng" name=i2 >KRW</span>
+                        </form>
+                            <script>  
+                                function chImg2(flag1){
+                                    document.images.i0.src=flag1;
+                                }
+                                
+                            </script>
+                    </div>
+                    <div class="num">
+                        <input id="cost1" type="text" name="sum1" value="0" onkeyup="exc();">
+                        <div class="num_text"><span>0원</span></div>
+                    </div>
+                </div>
+                <div class="change">
+                    <p>=</p>
+                </div>
+                <div class="box">
+                    <div class="select">
+                        <img src="http://jinjulee.dothome.co.kr/images/nts/flag_usd.png" name=i1 class="flag_img"><form>
+                            <select name="nation2" onchange=chImg(this.value); class="select_nation">
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_krw.png">대한민국</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_usd.png" selected>미국</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_jpy.png">일본</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_eur.png">유럽연합</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_cny.png">중국</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_aud.png">호주</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_cad.png">캐나다</option>
+                                <option value="http://jinjulee.dothome.co.kr/images/nts/flag_nzd.png">뉴질랜드</option>
+                            </select>
+                            <span class="nt_eng">USD</span>
+                        </form>
+                        <script>
+                          function chImg(flag2) {
+                            document.images.i1.src=flag2;
+                          }
+                        </script>
+
+                    </div>
+                    <div class="num">
+                        <input id="cost2" type="text" name="sum2" value="0" >
+                        <div class="num_text"><span>0달러</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="exchangerate_data">
+                <table class="tb_data">
+                    <caption>주요국가 환율정보</caption>
+                    <thead class="tb_header">
+                        <tr>
+                            <th scope="col">통화명</th>
+                            <th scope="col">매매기준율</th>
+                            <th scope="col">전일대비</th>
+                            <th scope="col">등락률</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tb_body">
+                        <tr class="tr_dw">
+                            <th scope="row"><a href="#">미국<abbr>USD</abbr></a></th>
+                            <td class="basic">1,113.00</td>
+                            <td><span class="icon"></span>2.00</td>
+                            <td>-0.18%</td>
+                        </tr>
+                        <tr class="tr_up">
+                            <th scope="row"><a href="#">일본<abbr>JPY 100</abbr></a></th>
+                            <td>943.94</td>
+                            <td><span class="icon"></span>4.04</td>
+                            <td>0.43%</td>
+                        </tr>
+                        <tr class="tr_dw">
+                            <th scope="row"><a href="#">유럽연합<abbr>EUR</abbr></a></th>
+                            <td>1,388.91</td>
+                            <td><span class="icon"></span>5.51</td>
+                            <td>-0.40%</td>
+                        </tr>
+                        <tr class="tr_dw">
+                            <th scope="row"><a href="#">중국<abbr>CNY</abbr></a></th>
+                            <td>181.72</td>
+                            <td><span class="icon"></span>0.23</td>
+                            <td>-0.13%</td>
+                        </tr>
+                        <tr class="tr_up">
+                            <th scope="row"><a href="#">호주<abbr>AUD</abbr></a></th>
+                            <td>958.52</td>
+                            <td><span class="icon"></span>0.40</td>
+                            <td>0.04%</td>
+                        </tr>
+                        <tr class="tr_up">
+                            <th scope="row"><a href="#">캐나다<abbr>CAD</abbr></a></th>
+                            <td>983.74</td>
+                            <td><span class="icon"></span>1.53</td>
+                            <td>0.16%</td>
+                        </tr>
+                        <tr class="tr_dw">
+                            <th scope="row"><a href="#">뉴질랜드<abbr>NZD</abbr></a></th>
+                            <td>874.15</td>
+                            <td><span class="icon"></span>0.46</td>
+                            <td>-0.05%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="exchangerate_guide">
+                <p>위 정보는 투자 참고사항이며, 오류가 있을 수 있습니다.<br>
+                기준 : 11/21 17:58 067회차
+                <span class="src">제공 <a href="http://fx.keb.co.kr/FER1101C.web?schID=fex&mID=FER1101C"><img src="https://ssl.pstatic.net/sstatic/keypage/outside/economy/2013102814013391365.png" width="90" height="14" alt="KEB 외환은행"></a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

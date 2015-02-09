@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "나눔고딕", NanumGothic, "helvetica nenu", "apple sd gothic neo", sans-serif;
+}
+body {
+    background: #e9ecef;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+#section {
+    width: 100%;
+}
+#section h1 {
+    font-size: 16px;
+    padding: 8px;
+}
+.exchangerate {
+    width: 97%;
+    margin: 0 auto;
+    background: #fff;
+}
+.exchangerate_select {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.box {
+    margin: 0;
+    border: 1px solid #b2b7bd;
+    border-radius: 3px;
+    height: 54px;
+    background: #f9f9f9;
+    position: relative;
+    width: 100%;
+}
+.box .select {
+    width: 123px;
+    border-right: 1px solid #b7bec5;
+    float: left;
+    height: 100%;
+}
+.box .select .select_nation {
+    display: block;
+    overflow: hidden;
+    width: 123px;
+    height: 30px;
+    margin: 0;
+    padding: 0 0 0 36px;
+    border: 0;
+    background: transparent url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/exchange/im/im_list.png) no-repeat 109px -31px;
+    background-size: 16px 125px;
+    font-size: 16px;
+    line-height: 38px;
+    color: #000;
+    -webkit-appearance: none;
+}
+.flag_img {
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    display: block;
+}
+.box .select .nt_eng {
+    display: block;
+    padding-left: 36px;
+    font-size: 15px;
+    color: #656873;
+}
+.box .num {
+    display: -webkit-box;
+    position: relative;
+    height: 100%;
+    background: #fff;
+    -webkit-box-orient: vertical;
+    padding-right: 7px;
+}
+.box .num input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: right;
+}
+.box .num .num_text {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: #656873;
+    font-size: 14px;
+    line-height: 20px;
+}
+.change p {
+    text-align: center;
+}
+.tb_data {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #eeefef;
+    text-align: center;
+}
+.tb_data caption {
+    display: none;
+}
+.tb_data .tb_header {
+}
+.tb_data .tb_header tr th {
+    color: #7f8190;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 30px;
+}
+.tb_data .tb_header tr th:first-child {
+    border-right: 1px solid #eeefef;
+    width: 34%;
+}
+.tb_data .tb_body {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 30px;
+}
+.tb_data .tb_body tr {
+    border: 1px solid #eeefef;
+}
+.tb_data .tb_body tr th {
+    border: 1px solid #eeefef;
+    text-align: left;
+    color: #0e5aba;
+    font-weight: 100;
+    padding-left: 10px;
+}
+.tb_data .tb_body .tr_dw .icon {
+    display: inline-block;
+    width: 10px;
+    height: 8px;
+    background: url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/exchange/im/im_list.png) no-repeat 0 -25px;
+    background-size: 17px auto;
+    margin-right: 3px;
+}
+.tb_data .tb_body .tr_up .icon {
+    display: inline-block;
+    width: 10px;
+    height: 8px;
+    background: url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/exchange/im/im_list.png) no-repeat 0 0;
+    background-size: 17px auto;
+    margin-right: 3px;
+}
+.tb_data .tb_body tr th a abbr {
+    color: #7f8190;
+    padding: 0 5px;
+}
+.tb_data .tb_body .tr_up {
+    color: #ff0012;
+}
+.tb_data .tb_body .tr_dw {
+    color: #0299e9;
+}
+.tb_data .tb_body tr td {
+}
+.exchangerate_guide {
+    border: 1px solid #eeefef;
+    border-top: 0px;
+}
+.exchangerate_guide p {
+    font-size: 14px;
+    line-height: 21px;
+    color: #7f8190;
+    padding: 8px;
+}
+.exchangerate .src {
+    float: right;
+}
+/*
+국기 이미지 : https://ssl.pstatic.net/sstatic/keypage/lifesrch/exchange/im/bg_flag.png
+
+아이콘 이미지 :
+https://ssl.pstatic.net/sstatic/keypage/lifesrch/exchange/im/im_list.png
+*/
