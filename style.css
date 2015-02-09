@@ -56,6 +56,8 @@ a {
     line-height: 38px;
     color: #000;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
 }
 .flag_img {
     width: 25px;
@@ -73,10 +75,14 @@ a {
 }
 .box .num {
     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
     position: relative;
     height: 100%;
     background: #fff;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
     padding-right: 7px;
 }
 .box .num input {
