@@ -7,15 +7,9 @@
     <meta name="X-UA-Compatible" content="IE=EDGE">
     <link rel="stylesheet" href="style.css">
     <script>
-        var cost1, cost2;
-        var basic;
-        var result;
         function exc() {
-            cost1 = document.getElementById("cost1").value;
-            basic = document.getElementsByClassName("basic").innerHTML;
-            result = cost1 * basic;
-            document.getElementById("cost2").value = result;
-        }
+          document.frm2.sum2.value = document.frm1.sum1.value * 1113;
+      }
     </script>
     <title>환율정보</title>
 </head>
@@ -26,7 +20,8 @@
             <div class="exchangerate_select">
                 <div class="box">
                     <div class="select">
-                        <img src="http://jinjulee.dothome.co.kr/images/nts/flag_krw.png" name=i0 class="flag_img"><form>
+                        <img src="http://jinjulee.dothome.co.kr/images/nts/flag_krw.png" name=i0 class="flag_img" alt="flag">
+                            <form>
                             <select name="nation1" onchange=chImg2(this.value) class="select_nation" >
                                 <option value="http://jinjulee.dothome.co.kr/images/nts/flag_krw.png">대한민국</option>
                                 <option value="http://jinjulee.dothome.co.kr/images/nts/flag_usd.png">미국</option>
@@ -37,18 +32,19 @@
                                 <option value="http://jinjulee.dothome.co.kr/images/nts/flag_cad.png">캐나다</option>
                                 <option value="http://jinjulee.dothome.co.kr/images/nts/flag_nzd.png">뉴질랜드</option>
                             </select>
-
                             <span class="nt_eng" name=i2 >KRW</span>
-                        </form>
+                            </form>
                             <script>  
                                 function chImg2(flag1){
                                     document.images.i0.src=flag1;
                                 }
                                 
                             </script>
-                    </div>
+                        </div>
                     <div class="num">
-                        <input id="cost1" type="text" name="sum1" value="0" onkeyup="exc();">
+                        <form name="frm1">
+                        <input type="text" name="sum1" value="0" onkeyup="exc();">
+                        </form>
                         <div class="num_text"><span>0원</span></div>
                     </div>
                 </div>
@@ -57,7 +53,8 @@
                 </div>
                 <div class="box">
                     <div class="select">
-                        <img src="http://jinjulee.dothome.co.kr/images/nts/flag_usd.png" name=i1 class="flag_img"><form>
+                        <img src="http://jinjulee.dothome.co.kr/images/nts/flag_usd.png" name=i1 class="flag_img" alt="flag">
+                            <form>
                             <select name="nation2" onchange=chImg(this.value); class="select_nation">
                                 <option value="http://jinjulee.dothome.co.kr/images/nts/flag_krw.png">대한민국</option>
                                 <option value="http://jinjulee.dothome.co.kr/images/nts/flag_usd.png" selected>미국</option>
@@ -69,16 +66,17 @@
                                 <option value="http://jinjulee.dothome.co.kr/images/nts/flag_nzd.png">뉴질랜드</option>
                             </select>
                             <span class="nt_eng">USD</span>
-                        </form>
+                            </form>
                         <script>
                           function chImg(flag2) {
                             document.images.i1.src=flag2;
                           }
                         </script>
-
                     </div>
                     <div class="num">
-                        <input id="cost2" type="text" name="sum2" value="0" >
+                        <form name="frm2">
+                        <input type="text" name="sum2" value="0" onkeyup="exc();">
+                        </form>
                         <div class="num_text"><span>0달러</span></div>
                     </div>
                 </div>
